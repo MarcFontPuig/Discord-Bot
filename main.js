@@ -27,15 +27,17 @@ client.on('message', (receivedMessage) => {
         return
     }
 
-    //Al mencionar el BOT
+    // Al mencionar el BOT
     if (receivedMessage.content.includes(client.user.toString())) {
       receivedMessage.channel.send("**CALLATE** " + receivedMessage.author.toString() + " **NO ME IMPORTA!**")
     }
-
+  
+    // Al poner {
     if (receivedMessage.content.startsWith("{")) {
       processCommand(receivedMessage)
     }
 
+    // Si pone Monika
     if (receivedMessage.content.includes("Monika")) {
       receivedMessage.channel.send("Just Monika")
     }
@@ -63,6 +65,7 @@ function processCommand(receivedMessage) {
   }
 }
 
+// FUNCIONES DE AYUDA
 function helpCommand(arguments, receivedMessage) {
   if (arguments.length > 0) {
     receivedMessage.channel.send("¿Necesitas ayuda con " + arguments + "? No se si dartela")
@@ -71,12 +74,13 @@ function helpCommand(arguments, receivedMessage) {
   }
 }
 
+// ARRAY FRUTAS
 function fruta(arguments, receivedMessage) {
   var frutas = ["Albaricoque", "Cereza", "Ciruela", "Fresa", "Limón", "Mandarina", "Manzana", "Melón", "Pera", "Piña", "Plátano", "Tu eres mi fruta"];
   receivedMessage.channel.send(frutas[Math.floor(Math.random() * frutas.length)])
 }
 
 
-// TOKEN BOT
-bot_secret_token = "NTU1ODY2NTIzMzM2NTcyOTY1.XJ-uVQ.8gvjb3ybPsJbnkWkXgqXVlFpb64"
+// CLAVES BOT
+bot_secret_token = "NTU1ODY2NTIzMzM2NTcyOTY1.XKPJXg.gGAJVCL-JfjExun7LZ868o_I8Uc"
 client.login(bot_secret_token)
