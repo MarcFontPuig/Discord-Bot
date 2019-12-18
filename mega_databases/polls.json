@@ -1,0 +1,15 @@
+{
+  "594672292873764876": {
+    "rank": "Normal",
+    "Introduzca el comado para mostrar las cartas": {
+      "Escribe el nombre de la colección": {
+        "type": "one"
+      }
+    },
+    "df": {
+      "as": {
+        "type": "one"
+      }
+    }
+  }
+}

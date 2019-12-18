@@ -1,0 +1,22 @@
+{
+    guildID: {
+        rank: "Normal"/"VIP"/"Premium",
+        polls: {
+            pollCommand: {
+                pollName: {
+                    id: {
+                        name: String,
+                        description: String,
+                        img: url,
+                        users: [],
+                    },
+                    type: "one"/"mult"
+                }
+            }
+        }
+    }
+}
+
+Normal  => 50 images
+VIP     => 100 images
+Premium => Unlimited images

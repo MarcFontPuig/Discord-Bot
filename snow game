@@ -1,0 +1,6 @@
+channelID: {
+    player1: {
+        id: userID
+        life: 3
+    }
+}
